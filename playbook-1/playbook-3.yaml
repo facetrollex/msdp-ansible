@@ -1,0 +1,5 @@
+---
+- name: Get report from servers
+  hosts: all
+  roles:
+    - uptime-report

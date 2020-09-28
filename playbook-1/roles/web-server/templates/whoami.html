@@ -1,0 +1,26 @@
+<html>
+<head></head>
+<body>
+    <h1>Server Groups:</h1>
+    <p>
+        {{ group_names }}
+    </p>
+
+    <h2>
+        Server
+    </h1>
+    <p>
+        {{ inventory_hostname }}
+    </p>
+
+    <p>
+        {% if 'web1' in group_names %}
+        Im Tomato!
+        {% endif %}
+
+        {% if 'web2' in group_names %}
+        Im Potato!
+        {% endif %}
+    </p>
+</body>
+</html>

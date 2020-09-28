@@ -1,0 +1,6 @@
+---
+- name: MANAGE NODES
+  hosts: [web1, web2]
+  become: yes
+  roles:
+    - web-server

@@ -1,0 +1,16 @@
+---
+- name: Add whoami.html to web server
+  template:
+    src: whoami.html
+    dest: "{{ web_server_default_path }}/whoami.html"
+    mode: 0644
+  notify:
+    - restart httpd
+
+- name: Add whoami2.html to web server
+  template:
+    src: whoami2.html
+    dest: "{{ web_server_default_path }}/whoami2.html"
+    mode: 0644
+  notify:
+    - restart httpd
